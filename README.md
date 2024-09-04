@@ -1,0 +1,1 @@
+## this is a simple paytm clone where people can signup ,signin,can see their balances, all usrers and can send money to one person to another but in this we give random bank balnce for a user and also using rollback in transcations.
