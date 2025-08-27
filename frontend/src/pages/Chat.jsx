@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import axios from "axios";
 
 // ✅ connect once globally (avoid multiple sockets)
-const socket = io("http://localhost:3006", { autoConnect: false });
+const socket = io("https://paylink-2.onrender.com", { autoConnect: false });
 
 export const Chat = () => {
   const { userId } = useParams(); // person you're chatting with
@@ -29,7 +29,7 @@ export const Chat = () => {
     if (!userId) return;
     
     axios
-      .get(`http://localhost:3006/api/v1/user/${userId}`, {
+  .get(`https://paylink-2.onrender.com/api/v1/user/${userId}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -48,7 +48,7 @@ export const Chat = () => {
 
     setLoading(true);
     axios
-      .get(`http://localhost:3006/api/v1/chat/history/${myId}/${userId}`, {
+  .get(`https://paylink-2.onrender.com/api/v1/chat/history/${myId}/${userId}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },

@@ -5,7 +5,7 @@ import { Appbar } from "../components/Appbar";
 import { Balance } from "../components/Balance";
 import { Users } from "../components/Users";
 
-const API = "http://localhost:3006/api/v1";
+const API = "https://paylink-2.onrender.com/api/v1";
 
 const Home = ({ user, balance, loadingUser, loadingBalance }) => {
   const hours = new Date().getHours();

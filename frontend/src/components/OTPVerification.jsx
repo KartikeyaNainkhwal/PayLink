@@ -46,7 +46,7 @@ export const OTPVerification = ({ userData, onBack }) => {
     setMessage("");
 
     try {
-      const response = await axios.post("http://localhost:3006/api/v1/user/verify-otp", {
+  const response = await axios.post("https://paylink-2.onrender.com/api/v1/user/verify-otp", {
         ...userData,
         otp,
       });
@@ -65,7 +65,7 @@ export const OTPVerification = ({ userData, onBack }) => {
     setMessage("");
 
     try {
-      await axios.post("http://localhost:3006/api/v1/user/resend-otp", {
+  await axios.post("https://paylink-2.onrender.com/api/v1/user/resend-otp", {
         username: userData.username,
       });
       setTimer(600); // Reset timer to 10 minutes

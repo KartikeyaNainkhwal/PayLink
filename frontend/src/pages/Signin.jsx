@@ -15,7 +15,7 @@ export const Signin = () => {
 
   const handleSignin = async () => {
     try {
-      const response = await axios.post("http://localhost:3006/api/v1/user/signin", {
+  const response = await axios.post("https://paylink-2.onrender.com/api/v1/user/signin", {
         username,
         password,
       });
@@ -32,7 +32,7 @@ export const Signin = () => {
       const idToken = credentialResponse?.credential;
       if (!idToken) throw new Error("Google credential missing");
 
-      const resp = await axios.post("http://localhost:3006/api/v1/user/google-auth", {
+  const resp = await axios.post("https://paylink-2.onrender.com/api/v1/user/google-auth", {
         token: idToken,
       });
 

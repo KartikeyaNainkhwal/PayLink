@@ -8,7 +8,7 @@ export const Users = () => {
     const [filter, setFilter] = useState("");
 
     useEffect(() => {
-        axios.get("http://localhost:3006/api/v1/user/bulk?filter=" + filter)
+    axios.get("https://paylink-2.onrender.com/api/v1/user/bulk?filter=" + filter)
             .then(response => {
                 setUsers(response.data.user);
             })

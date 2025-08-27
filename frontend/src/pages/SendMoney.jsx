@@ -26,7 +26,7 @@ export const SendMoney = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:3006/api/v1/account/transfer",
+  "https://paylink-2.onrender.com/api/v1/account/transfer",
         {
           to: id,
           amount: Number(amount),

@@ -44,7 +44,7 @@ export const Signup = () => {
     setMessage("");
 
     try {
-      const response = await axios.post("http://localhost:3006/api/v1/user/request-otp", {
+  const response = await axios.post("https://paylink-2.onrender.com/api/v1/user/request-otp", {
         username,
         firstName,
         lastName,
@@ -68,7 +68,7 @@ export const Signup = () => {
       const idToken = credentialResponse?.credential;
       if (!idToken) throw new Error('Google credential missing');
 
-      const resp = await axios.post('http://localhost:3006/api/v1/user/google-auth', { token: idToken });
+  const resp = await axios.post('https://paylink-2.onrender.com/api/v1/user/google-auth', { token: idToken });
       localStorage.setItem('token', resp.data.token);
       navigate('/dashboard');
     } catch (err) {

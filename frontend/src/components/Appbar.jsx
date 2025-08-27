@@ -16,7 +16,7 @@ export const Appbar = () => {
 useEffect(() => {
   const fetchUser = async () => {
     try {
-      const res = await axios.get("http://localhost:3006/api/v1/profile/details", {
+  const res = await axios.get("https://paylink-2.onrender.com/api/v1/profile/details", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -50,7 +50,7 @@ useEffect(() => {
   const handleUpdate = async () => {
     try {
       const res = await axios.put(
-        "http://localhost:3006/api/v1/profile/update",
+        "https://paylink-2.onrender.com/api/v1/profile/update",
         formData,
         {
           headers: {
